@@ -7,8 +7,8 @@ const socket = io("http://localhost:3000");
 
 
 // Get user name
-//const username = (prompt("Type your name:") ? (username) : (`User_${Math.floor(Math.random() * 100)}`)); // Get user name or generate a random one
-const username = `User_${Math.floor(Math.random() * 100)}`;
+const username = (prompt("Type your name:") ? (username) : (`User_${Math.floor(Math.random() * 100)}`)); // Get user name or generate a random one
+//const username = `User_${Math.floor(Math.random() * 100)}`;
 socket.emit("join", username);
 appendMsg(`You joined chat as ${username}`);
 
